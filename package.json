@@ -1,6 +1,8 @@
 {
 	"private": true,
-	"scripts": {},
+	"scripts": {
+		"server": "nodemon index.js"
+	},
 	"devDependencies": {
 		"nodemon": "^2.0.7"
 	},
