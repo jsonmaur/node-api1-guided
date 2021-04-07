@@ -28,6 +28,10 @@ server.get("/users/:id", (req, res) => {
 })
 
 server.post("/users", (req, res) => {
+	if (!req.body.name) {
+		return res.status(400).json({ message: "Need a user name" })
+	}
+
 	const newUser = db.createUser({
 		name: req.body.name,
 	})
